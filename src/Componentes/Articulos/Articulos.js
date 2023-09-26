@@ -55,7 +55,7 @@ const Articulos = () => {
         <div style={tituloStyles}>¿Qué es la violencia intrafamiliar?</div>
         <div style={columnasContainerStyles}>
           <div style={columnaStyles}>
-            <img src={imagen1} alt="Descripción de la imagen 1" />
+            <img src={imagen5} alt="Descripción de la imagen 1" />
           </div>
           <div style={columnaStyles}>
             <p>
@@ -81,7 +81,7 @@ const Articulos = () => {
           <div style={columnaStyles}>
             <div style={seccionContenidoStyles}>
               <h2>ABANDONO</h2>
-              <img src={imagen2} alt="Descripción de la imagen 1" />
+              <img src={imagen1} alt="Descripción de la imagen 1" />
               <p>
                 Desamparar de manera injustificada a uno o varios miembros de la
                 familia pueden poner en peligro la salud de los miembros de la
@@ -92,7 +92,7 @@ const Articulos = () => {
           <div style={columnaStyles}>
             <div style={seccionContenidoStyles}>
               <h2>MALTRATO FÍSICO</h2>
-              <img src={imagen3} alt="Descripción de la imagen 1" />
+              <img src={imagen2} alt="Descripción de la imagen 1" />
               <p>
                 Incluye acciones como golpear, empujar, sacudir, abofetear,
                 patear, pellizcar, asfixiar, estrangular y quemar.
@@ -102,7 +102,7 @@ const Articulos = () => {
           <div style={columnaStyles}>
             <div style={seccionContenidoStyles}>
               <h2>MALTRATO PSICOLÓGICO</h2>
-              <img src={imagen4} alt="Descripción de la imagen 1" />
+              <img src={imagen3} alt="Descripción de la imagen 1" />
               <p>
                 Una acción u omisión que causa alteraciones o trastornos
                 psiquiátricos
@@ -112,7 +112,7 @@ const Articulos = () => {
           <div style={columnaStyles}>
             <div style={seccionContenidoStyles}>
               <h2>MALTRATO SEXUAL</h2>
-              <img src={imagen5} alt="Descripción de la imagen 1" />
+              <img src={imagen4} alt="Descripción de la imagen 1" />
               <p>
                 En otras palabras, imponer o inducir a prácticas sexuales no
                 deseadas o que no tiene la capacidad para consentir
