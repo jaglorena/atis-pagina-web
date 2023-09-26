@@ -1,0 +1,42 @@
+/* Footer Container */
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 20px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered-container {
+  text-align: center;
+}
+/* Contact Info */
+.contact-info h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Navigation Links */
+.navigation-links h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.navigation-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navigation-links li {
+  margin-bottom: 5px;
+}
+
+.navigation-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Copyright */
+.copyright p {
+  font-size: 14px;
+}
