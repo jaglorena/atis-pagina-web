@@ -1,0 +1,46 @@
+.btn-outline-primary:hover {
+    background-color: #D44325;
+    border-color: #D44325;
+}
+.btn-outline-primary {
+    border-color: #D44325;
+    color: black;
+}
+
+.btn-outline-success:hover {
+    background-color: #828282;
+    border-color: #828282;
+    color: white;
+}
+.btn-outline-success {
+    border-color: #828282;
+    color: black;
+}
+
+.rw-state-focus .rw-widget-picker {
+    border-color: #D44325;
+    box-shadow: 0 0 0 3px rgba(212, 67, 37, 0.25);
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+.rw-widget-picker {
+    display: grid;
+    overflow: hidden;
+    min-height: 38px;
+    background-color: #fff;
+    border: #D44325 1px solid;
+    border-radius: 4px;
+    outline: none;
+    grid-template: 1fr/1fr 1.9em;
+    width: 100%;
+}
+
+.rw-cell.rw-state-selected {
+    background-color: #D44325;
+    border-color: #D44325;
+    color: #fff;
+}
+
+body {
+    font-family: 'Lora', serif;
+}
