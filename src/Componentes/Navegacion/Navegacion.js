@@ -11,7 +11,6 @@ function Navegacion() {
   }
 
   document.body.onclick = function (e) {
-    console.log(e.clientX);
     if (e.clientX > window.innerWidth * 0.8) {
       setToggle(false);
     }
