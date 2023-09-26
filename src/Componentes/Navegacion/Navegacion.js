@@ -31,7 +31,7 @@ function Navegacion() {
       </div>
       <nav className={toggle ? "sidebar" : ""}>
         <ul>
-          <Col md={6}>
+          <Col md={8}>
             <Link to="/" onClick={toggleSideBar}>
               <li>
                 <h5 style={{ marginTop: 15 }}>INICIO</h5>
@@ -45,6 +45,11 @@ function Navegacion() {
             <Link to="/acercade" onClick={toggleSideBar}>
               <li>
                 <h5 style={{ marginTop: 15 }}>ACERCA DE</h5>
+              </li>
+            </Link>
+            <Link to="/agendar" onClick={toggleSideBar}>
+              <li>
+                <h5>CITA</h5>
               </li>
             </Link>
           </Col>

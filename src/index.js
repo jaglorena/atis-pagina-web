@@ -10,6 +10,7 @@ import Singup from './Componentes/Singup/Singup';
 import Login from './Componentes/Login/Login';
 import Articulos from './Componentes/Articulos/Articulos'
 import BotonFlotante from './Componentes/BotonFlotante/BotonFlotante';
+import AgendarCita from './Componentes/AgendarCita/AgendarCita';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
     path: "/btnFlotante",
     element: <BotonFlotante />
   },
+  {
+    path: "/agendar",
+    element: <AgendarCita />
+  }
 ])
 
 
