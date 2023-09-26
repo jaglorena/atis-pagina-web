@@ -1,0 +1,15 @@
+.pagina-inicio {
+    background-color: #FDFDEE;
+    padding: 20px; /* Añade espacio de relleno si es necesario */
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--color-ternario);
+}
+
+.ButtonInicio{
+    margin-left: 0px; 
+    background: #828282;
+    color: white;
+    border-radius: 10%;
+}

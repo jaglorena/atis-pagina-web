@@ -1,0 +1,10 @@
+/* styles.css o cualquier otro archivo CSS */
+.floating-button {
+    position: fixed;
+    border-radius: 9%;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: #D44325;
+  }
+  
