@@ -14,7 +14,7 @@ function AcercaDe() {
         <Navegacion />
         <Container >
           <Row>
-            <Col xs="12" md="12" className="mx-auto mt-4">
+            <Col xs="10" md="10" className="mx-auto mt-4">
               <h1>CuénTanos.org</h1>
               <UncontrolledCarousel
                 className="mt-5 mb-5"
