@@ -13,11 +13,12 @@ const Inicio = () => {
   return (
     <>
       <Navegacion />
-      <div className="pagina-inicio">
+      <div className="pagina-inicio" style={{ background: "linear-gradient(to right, black, #0f1f0c)", }}>
+        {/* Cambia el color de fondo a azul (#0074e4) */}
         <Container>
           <Row>
             <Col xs="12" md="12" className="mx-auto mt-4">
-              <h1>CuénTanos.org</h1>
+              <h1 style={{color: "white",}}>CuénTanos.org</h1>
               <UncontrolledCarousel
                 className="mt-5"
                 items={[
@@ -41,19 +42,18 @@ const Inicio = () => {
             <Col xs="12" md="12">
               <div className="informacion mt-5">
                 <h5>
-                  - El éxito no se trata solo de lograr tus metas, sino de cómo te conviertes en el proceso. El camino hacia el éxito es una
-                  oportunidad para crecer, aprender y convertirte en la mejor versión de ti mismo. <br/>
-                  <br/>
-                  - No importa cuán oscuro pueda parecer el camino, siempre hay una salida. La esperanza y la ayuda están disponibles para ti. <br/>
-                  <br/>
-                  - Nunca subestimes el impacto que tu historia de supervivencia puede tener en otros. Tu valentía puede inspirar a alguien más 
-                  a buscar ayuda y cambiar su vida.<br/>
+                  {/* Contenido de tu componente */}
                 </h5>
                 <Link to="seccion/">
                   <li>
                     <Button
                       className="ButtonInicio mt-5"
-                      style={{ height: 50, marginTop: 4, marginBottom: 2 }}
+                      style={{
+                        height: 40,
+                        marginTop: 3,
+                        marginBottom: 2,
+                        background: "linear-gradient(to right, #a6ff8e, #1d7f13)",
+                      }}
                     >
                       <h5>Sección de artículos</h5>
                     </Button>
@@ -61,7 +61,7 @@ const Inicio = () => {
                 </Link>
               </div>
             </Col>
-            <BotonFlotante  />
+            <BotonFlotante />
           </Row>
         </Container>
       </div>

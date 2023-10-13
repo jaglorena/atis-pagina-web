@@ -7,7 +7,10 @@ function BotonFlotante() {
     <Container className="float-container">
       <Row>
         <Col>
-          <Button className="floating-button" style={{ height: 50, marginTop: 90, marginBottom: 20 }}>
+          <Button className="floating-button" style={{ height: 40,
+              marginTop: 3,
+              marginBottom: 2,
+              background: "linear-gradient(to right, #a6ff8e, #1d7f13)", }}>
             <h6>Teléfonos de emergencia</h6>
           </Button>
         </Col>

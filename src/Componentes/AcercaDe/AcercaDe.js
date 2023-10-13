@@ -5,28 +5,33 @@ import Footer from '../Footer/Footer';
 import BotonFlotante from "../BotonFlotante/BotonFlotante";
 
 function AcercaDe() {
+  const pageStyle = {
+    background: "linear-gradient(to right, black, #0f1f0c)", // Establece el fondo con el gradiente deseado
+  };
+
   return (
     <>
         <Navegacion />
-        <div className='cuerpo'>
-      <div className="header">
-        <h1 className="header-title">ACERCA DE NOSOTROS</h1>
-      </div>
+        <div className='cuerpo' style={pageStyle} >
+        <div className="header" style={{background: "linear-gradient(to right, black, #0f1f0c)"}}>
+  <h1 className="header-title" style={{color: "white"}}>ACERCA DE NOSOTROS</h1>
+</div>
+
       <div className="main">
         <section className="about-content">
-          <h2 className="about-title">Nuestra Misión</h2>
+          <h2 className="about-title" style={{color: "black"}}>Nuestra Misión</h2>
           <p>
             En {new Date().getFullYear()}, fundamos nuestra organización con el firme compromiso de ayudar a las personas que sufren de violencia intrafamiliar. Nuestra misión es proporcionar apoyo, recursos y un refugio seguro para aquellos que enfrentan situaciones difíciles en sus hogares.
           </p>
         </section>
         <section className="about-content">
-          <h2 className="about-title">Nuestro Compromiso</h2>
+          <h2 className="about-title" style={{color: "black"}}>Nuestro Compromiso</h2>
           <p>
             En cada paso que damos, nos guían los valores de empatía, solidaridad y justicia. Trabajamos incansablemente para concienciar sobre la violencia intrafamiliar y ofrecer ayuda a las víctimas, brindándoles la esperanza y el apoyo necesarios para reconstruir sus vidas.
           </p>
         </section>
         <section className="about-content">
-          <h2 className="about-title">Nuestros Servicios</h2>
+          <h2 className="about-title" style={{color: "black"}}>Nuestros Servicios</h2>
           <p>
             Ofrecemos una variedad de servicios, que incluyen asesoramiento, albergue temporal, asistencia legal y programas de empoderamiento. Nuestro equipo dedicado está aquí para escuchar, apoyar y guiar a quienes buscan salir de situaciones abusivas.
           </p>

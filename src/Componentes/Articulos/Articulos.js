@@ -28,7 +28,7 @@ const Articulos = () => {
     display: "flex",
     width: "100%",
     justifyContent: "space-between",
-    backgroundColor: "#FDFDEE",
+    background: "linear-gradient(to right, black, #0f1f0c)"
   };
 
   const columnaStyles = {
@@ -37,6 +37,7 @@ const Articulos = () => {
     margin: "0 10px",
     textAlign: "center",
     fontSize: "20px",
+    background: "linear-gradient(to right, black, black)"
   };
 
   const seccionContenidoStyles = {
@@ -48,14 +49,19 @@ const Articulos = () => {
     marginBottom: "10px",
   };
 
+  const pageStyle = {
+    background: "linear-gradient(to right, black, #0f1f0c)", // Establece el fondo en color negro
+    color: "white", // Cambia el color del texto a blanco
+  };
+
   return (
     <>
       <Navegacion />
-      <div style={contenedorStyles}>
+      <div  style={pageStyle}>
         <div style={tituloStyles}>¿Qué es la violencia intrafamiliar?</div>
         <div style={columnasContainerStyles}>
-          <div style={columnaStyles}>
-            <img src={imagen5} alt="Descripción de la imagen 1" />
+          <div style={pageStyle}>
+            <img  src={imagen5} alt="Descripción de la imagen 1" />
           </div>
           <div style={columnaStyles}>
             <p>
