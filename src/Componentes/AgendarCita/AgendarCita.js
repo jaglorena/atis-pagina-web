@@ -6,7 +6,6 @@ import "./AgendarCita.css"
 import Navegacion from "../Navegacion/Navegacion"
 import Footer from "../Footer/Footer"
 import BotonFlotante from "../BotonFlotante/BotonFlotante"
-import Especialidades from "../../data/Especialidades"
 import Profesionales from "../../data/Profesionales"
 
 const AgendarCita = () => {
