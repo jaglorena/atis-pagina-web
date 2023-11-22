@@ -122,7 +122,7 @@ const Articulos = () => {
         </div>
         <BotonFlotante  />
       </div>
-      <Footer />;
+      <Footer />
     </>
   );
 };

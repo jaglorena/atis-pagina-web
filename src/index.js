@@ -11,6 +11,7 @@ import Login from './Componentes/Login/Login';
 import Articulos from './Componentes/Articulos/Articulos'
 import BotonFlotante from './Componentes/BotonFlotante/BotonFlotante';
 import AgendarCita from './Componentes/AgendarCita/AgendarCita';
+import Foro from './Componentes/Foro/Foro';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/agendar",
     element: <AgendarCita />
+  },
+  {
+    path: "/foro",
+    element: <Foro />
   }
 ])
 
