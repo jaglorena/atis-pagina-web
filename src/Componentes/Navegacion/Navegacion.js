@@ -36,7 +36,7 @@ function Navegacion() {
                 <h5 style={{ marginTop: 15 }}>INICIO</h5>
               </li>
             </Link>
-            <Link to="/" onClick={toggleSideBar}>
+            <Link to="/foro" onClick={toggleSideBar}>
               <li>
                 <h5 style={{ marginTop: 15 }}>FORO</h5>
               </li>
