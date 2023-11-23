@@ -20,15 +20,21 @@ import "react-datepicker/dist/react-datepicker.module.css";
 const AgendarCita = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [profesionales, setProfesionales] = useState([]);
-  const [horarios, setHorarios] = useState([]);
+  const [profesionalSeleccionado, setProfesional] = useState(null);
+  const [horario, setHorarios] = useState(null);
   const toggle = () => setDropdownOpen((prevState) => !prevState);
   const filtrar = (texto) =>
     setProfesionales(
       Profesionales.filter((persona) => persona.especialidad === texto)
     );
 
-  const handleClick = (horario) => {
-    setHorarios([...horarios, horario]);
+  const asignarHorario = (horario) => {
+    setHorarios(horario);
+  };
+
+  const asignarProfesional = (nombre) => {
+    setProfesional(nombre);
+    console.log(profesionalSeleccionado);
   };
 
   const [startDate, setStartDate] = useState(new Date());
@@ -78,7 +84,12 @@ const AgendarCita = () => {
               <Row style={{ marginTop: "30px" }}>
                 {profesionales.map((profesional, index) => (
                   <Row key={index}>
-                    <Button color="primary" outline>
+                    <Button
+                      color="primary"
+                      outline
+                      onClick={() => asignarProfesional(profesional.nombre)}
+                      disabled={profesionalSeleccionado === profesional.nombre}
+                    >
                       {profesional.nombre}
                     </Button>
                   </Row>
@@ -112,8 +123,8 @@ const AgendarCita = () => {
                       color="primary"
                       id="btn8"
                       outline
-                      onClick={() => handleClick(8)}
-                      disabled={horarios.includes(8)}
+                      onClick={() => asignarHorario(8)}
+                      disabled={horario === 8}
                     >
                       8-9
                     </Button>
@@ -122,8 +133,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => handleClick(9)}
-                      disabled={horarios.includes(9)}
+                      onClick={() => asignarHorario(9)}
+                      disabled={horario === 9}
                     >
                       9-10
                     </Button>
@@ -132,8 +143,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => handleClick(10)}
-                      disabled={horarios.includes(10)}
+                      onClick={() => asignarHorario(10)}
+                      disabled={horario === 10}
                     >
                       10-11
                     </Button>
@@ -142,8 +153,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => handleClick(11)}
-                      disabled={horarios.includes(11)}
+                      onClick={() => asignarHorario(11)}
+                      disabled={horario === 11}
                     >
                       11-12
                     </Button>
@@ -157,8 +168,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => handleClick(1)}
-                      disabled={horarios.includes(1)}
+                      onClick={() => asignarHorario(1)}
+                      disabled={horario === 1}
                     >
                       1-2
                     </Button>
@@ -167,8 +178,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => handleClick(2)}
-                      disabled={horarios.includes(2)}
+                      onClick={() => asignarHorario(2)}
+                      disabled={horario === 2}
                     >
                       2-3
                     </Button>
@@ -177,8 +188,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => handleClick(3)}
-                      disabled={horarios.includes(3)}
+                      onClick={() => asignarHorario(3)}
+                      disabled={horario === 3}
                     >
                       3-4
                     </Button>
@@ -187,8 +198,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => handleClick(4)}
-                      disabled={horarios.includes(4)}
+                      onClick={() => asignarHorario(4)}
+                      disabled={horario === 4}
                     >
                       4-5
                     </Button>
