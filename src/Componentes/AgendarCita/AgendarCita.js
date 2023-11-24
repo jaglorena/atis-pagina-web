@@ -63,13 +63,13 @@ const AgendarCita = () => {
     if (
       horarioSeleccionado === "10:00 AM" &&
       profesionalSeleccionado === "Abgda. Maria Lugano" &&
-      fechaCita.toLocaleDateString() == "5/12/2023"
+      fechaCita.toLocaleDateString() === "5/12/2023"
     ) {
       alert("Este horario ya se encuentra reservado");
       return;
     }
     let mensaje = `Se va a agendar la cita el dia ${fechaCita.toLocaleDateString()} iniciando a las ${horarioSeleccionado} con el profesional: ${profesionalSeleccionado}`;
-    if (window.confirm(mensaje) == true) alert("Cita agendada");
+    if (window.confirm(mensaje) === true) alert("Cita agendada");
   };
 
   return (
