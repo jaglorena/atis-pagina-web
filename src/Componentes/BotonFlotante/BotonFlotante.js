@@ -19,7 +19,10 @@ function BotonFlotante() {
           <Modal isOpen={modal} toggle={toggle}>
             <ModalHeader toggle={toggle}>Teléfonos de Emergencia</ModalHeader>
             <ModalBody className="modal-content">
-            <a href="https://www.pnc.gob.sv/">Policia Nacional Civil</a><h4>911</h4>
+            <a href="https://www.pnc.gob.sv/">Policia Nacional Civil</a><h4><FontAwesomeIcon icon={faPhone} className="phone-icono" /> 911</h4>
+            <a href="https://isdemu.gob.sv/">Instituto Salvadoreño para el Desarrollo de la Mujer-ISDEMU</a><h4><FontAwesomeIcon icon={faPhone} className="phone-icono"/> 2522-6000</h4>
+            <a href="https://goo.su/AJbzE">Fiscalía General de la República - Unidad de Atención Especializada para las Mujeres</a><h4><FontAwesomeIcon icon={faPhone} className="phone-icono"/> 2529-9200</h4>
+            <a href="https://injuve.gob.sv/">Instituto Nacional de la Juventud - INJUVE</a><h4><FontAwesomeIcon icon={faPhone} className="phone-icono" /> 2523-7171</h4>
             </ModalBody>
             <ModalFooter>
               <Button color="secondary" onClick={toggle}>
