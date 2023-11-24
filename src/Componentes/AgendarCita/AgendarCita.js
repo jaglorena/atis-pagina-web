@@ -23,10 +23,12 @@ const AgendarCita = () => {
   const [profesionalSeleccionado, setProfesional] = useState(null);
   const [horario, setHorarios] = useState(null);
   const toggle = () => setDropdownOpen((prevState) => !prevState);
-  const filtrar = (texto) =>
+  const filtrar = (texto) => {
+    setProfesional(null);
     setProfesionales(
       Profesionales.filter((persona) => persona.especialidad === texto)
     );
+  };
 
   const asignarHorario = (horario) => {
     setHorarios(horario);
@@ -34,7 +36,6 @@ const AgendarCita = () => {
 
   const asignarProfesional = (nombre) => {
     setProfesional(nombre);
-    console.log(profesionalSeleccionado);
   };
 
   const [startDate, setStartDate] = useState(new Date());
@@ -45,21 +46,19 @@ const AgendarCita = () => {
         <Container style={{ marginTop: "50px" }}>
           <Row>
             <Col>
-              <h1>Agenda una cita con nuestros profesionales</h1>
+              <h1>AGENDAR CITA</h1>
             </Col>
           </Row>
           <Row style={{ marginTop: "30px" }}>
-            <Col lg>
+            <Col lg={4} className="class-color">
               <Row style={{ marginTop: "20px" }}>
-                <h4 style={{ textAlign: "start" }}>
-                  Selecciona el área para tu cita
-                </h4>
+                <h4 style={{ textAlign: "center" }}>Elige Profesional</h4>
               </Row>
-              <Row>
+              <Row style={{ textAlign: "center" }}>
                 <Dropdown
                   isOpen={dropdownOpen}
                   toggle={toggle}
-                  direction={"end"}
+                  direction={"down"}
                   onChange={() => console.log("Clicked")}
                 >
                   <DropdownToggle caret>Seleccione especialidad</DropdownToggle>
@@ -76,48 +75,44 @@ const AgendarCita = () => {
                   </DropdownMenu>
                 </Dropdown>
               </Row>
-              <Row style={{ marginTop: "20px" }}>
-                <h4 style={{ textAlign: "start" }}>
-                  Profesionales disponibles! Selecciona!
-                </h4>
-              </Row>
-              <Row style={{ marginTop: "30px" }}>
+              <Row style={{ marginTop: "25px" }}>
                 {profesionales.map((profesional, index) => (
-                  <Row key={index}>
-                    <Button
-                      color="primary"
-                      outline
-                      onClick={() => asignarProfesional(profesional.nombre)}
-                      disabled={profesionalSeleccionado === profesional.nombre}
-                    >
-                      {profesional.nombre}
-                    </Button>
-                  </Row>
+                  <Col lg={12} key={index * 2}>
+                    <Row key={index}>
+                      <Button
+                        color="primary"
+                        outline
+                        onClick={() => asignarProfesional(profesional.nombre)}
+                        disabled={
+                          profesionalSeleccionado === profesional.nombre
+                        }
+                      >
+                        {profesional.nombre}
+                      </Button>
+                    </Row>
+                  </Col>
                 ))}
               </Row>
             </Col>
-            <Col lg>
+            <Col lg={4}>
               <Row style={{ marginTop: "20px" }}>
-                <h4 style={{ textAlign: "start" }}>
+                <h4 style={{ textAlign: "center" }}>
                   Selecciona el día <br /> de tu cita
                 </h4>
               </Row>
-              <Row>
+              <Row style={{ textAlign: "center" }}>
                 <ReactDatePicker
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
                 />
               </Row>
             </Col>
-            <Col lg>
+            <Col lg={4} className="class-color">
               <Row style={{ marginTop: "20px" }}>
-                <h4 style={{ textAlign: "start" }}>Horarios disponibles!</h4>
+                <h4 style={{ textAlign: "center" }}>Horarios disponibles</h4>
               </Row>
               <Row style={{ marginTop: "25px" }}>
                 <Col>
-                  <Row>
-                    <h5>AM</h5>
-                  </Row>
                   <Row>
                     <Button
                       color="primary"
@@ -126,7 +121,7 @@ const AgendarCita = () => {
                       onClick={() => asignarHorario(8)}
                       disabled={horario === 8}
                     >
-                      8-9
+                      8:00 AM
                     </Button>
                   </Row>
                   <Row>
@@ -136,7 +131,7 @@ const AgendarCita = () => {
                       onClick={() => asignarHorario(9)}
                       disabled={horario === 9}
                     >
-                      9-10
+                      9:00 AM
                     </Button>
                   </Row>
                   <Row>
@@ -146,7 +141,7 @@ const AgendarCita = () => {
                       onClick={() => asignarHorario(10)}
                       disabled={horario === 10}
                     >
-                      10-11
+                      10:00 AM
                     </Button>
                   </Row>
                   <Row>
@@ -156,14 +151,11 @@ const AgendarCita = () => {
                       onClick={() => asignarHorario(11)}
                       disabled={horario === 11}
                     >
-                      11-12
+                      11:00 AM
                     </Button>
                   </Row>
                 </Col>
                 <Col>
-                  <Row>
-                    <h5>PM</h5>
-                  </Row>
                   <Row>
                     <Button
                       color="primary"
@@ -171,7 +163,7 @@ const AgendarCita = () => {
                       onClick={() => asignarHorario(1)}
                       disabled={horario === 1}
                     >
-                      1-2
+                      1:00 PM
                     </Button>
                   </Row>
                   <Row>
@@ -181,7 +173,7 @@ const AgendarCita = () => {
                       onClick={() => asignarHorario(2)}
                       disabled={horario === 2}
                     >
-                      2-3
+                      2:00 PM
                     </Button>
                   </Row>
                   <Row>
@@ -191,7 +183,7 @@ const AgendarCita = () => {
                       onClick={() => asignarHorario(3)}
                       disabled={horario === 3}
                     >
-                      3-4
+                      3:00 PM
                     </Button>
                   </Row>
                   <Row>
@@ -201,7 +193,7 @@ const AgendarCita = () => {
                       onClick={() => asignarHorario(4)}
                       disabled={horario === 4}
                     >
-                      4-5
+                      4:00 PM
                     </Button>
                   </Row>
                   <Row>

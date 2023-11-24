@@ -59,3 +59,20 @@ body {
   --bs-btn-disabled-bg: #d44325;
   --bs-btn-disabled-border-color: #d44325;
 }
+
+.btn-secondary {
+  --bs-btn-bg: #d44325;
+  --bs-btn-border-color: #d44325;
+  --bs-btn-hover-bg: #000;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: var(--bs-dropdown-link-hover-color);
+  background-color: #d44325;
+}
+.class-color {
+  background-color: #c0b698;
+}
+.class-color {
+  background-color: #c0b698;
+}
