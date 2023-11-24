@@ -54,7 +54,16 @@ function Navegacion() {
           </Col>
         </ul>
       </nav>
-      
+      <Link to="/singup">
+        <li>
+          <Button className="Button" style={{ height: 40, marginTop: 3, marginBottom: 2  }}><h5>Registrate</h5></Button>
+        </li>
+      </Link>
+      <Link to="/login">
+        <li>
+          <Button className="Button" style={{ height: 40, marginTop: 3, marginBottom: 2  }}><h5>Iniciar Sesión</h5></Button>
+        </li>
+      </Link>
       <Link to="/">
         <li>
         <FaSearch  size={25} />
