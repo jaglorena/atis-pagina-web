@@ -8,6 +8,13 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
+  CardGroup,
+  Card,
+  CardImg,
+  CardBody,
+  CardText,
+  CardTitle,
+  CardSubtitle,
 } from "reactstrap";
 import "./AgendarCita.css";
 import Navegacion from "../Navegacion/Navegacion";
@@ -16,6 +23,9 @@ import BotonFlotante from "../BotonFlotante/BotonFlotante";
 import Profesionales from "../../data/Profesionales";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.module.css";
+import imagen1 from "./img/1card.png";
+import imagen2 from "./img/violencia.jpg";
+import imagen3 from "./img/maltrato.jpg";
 
 const AgendarCita = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -63,13 +73,13 @@ const AgendarCita = () => {
     if (
       horarioSeleccionado === "10:00 AM" &&
       profesionalSeleccionado === "Abgda. Maria Lugano" &&
-      fechaCita.toLocaleDateString() == "5/12/2023"
+      fechaCita.toLocaleDateString() === "5/12/2023"
     ) {
       alert("Este horario ya se encuentra reservado");
       return;
     }
     let mensaje = `Se va a agendar la cita el dia ${fechaCita.toLocaleDateString()} iniciando a las ${horarioSeleccionado} con el profesional: ${profesionalSeleccionado}`;
-    if (window.confirm(mensaje) == true) alert("Cita agendada");
+    if (window.confirm(mensaje) === true) alert("Cita agendada");
   };
 
   return (
@@ -249,10 +259,24 @@ const AgendarCita = () => {
                 outline
                 onClick={() => handleClickAgendar()}
               >
-                Agendar!
+                Agendar
               </Button>
             </Col>
           </Row>
+
+          <row className="mb-5">
+            <CardGroup className="mb-5 mt-5">
+              <Card>
+                <CardImg alt="Card image cap" src={imagen1} top width="100%" />
+              </Card>
+              <Card>
+                <CardImg alt="Card image cap" src={imagen2} top width="100%" />
+              </Card>
+              <Card>
+                <CardImg alt="Card image cap" src={imagen3} top width="100%" />
+              </Card>
+            </CardGroup>
+          </row>
         </Container>
         <div className="footer">
           <Footer />
