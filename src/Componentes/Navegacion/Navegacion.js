@@ -6,10 +6,7 @@ import "./Navegacion.css";
 
 function Navegacion() {
   const [toggle, setToggle] = useState(false);
-<<<<<<< Updated upstream
-=======
   const [loginClicked, setLoginClicked] = useState(false); // Nuevo estado para controlar el clic en iniciar sesión
->>>>>>> Stashed changes
 
   function toggleSideBar() {
     setToggle(!toggle);
@@ -72,40 +69,9 @@ function Navegacion() {
           </Col>
         </ul>
       </nav>
-<<<<<<< Updated upstream
-      <Link to="/singup">
-        <li>
-          <Button
-            className="Button"
-            style={{
-              height: 40,
-              marginTop: 3,
-              marginBottom: 2,
-              background: "linear-gradient(to right, #1d7f13, #a6ff8e)",
-            }}
-          >
-            <h5>Registrate</h5>
-          </Button>
-        </li>
-      </Link>
-      <Link to="/login">
-        <li>
-          <Button
-            className="Button"
-            style={{ height: 40,
-              marginTop: 3,
-              marginBottom: 2,
-              background: "linear-gradient(to right, #a6ff8e, #1d7f13)", }}
-          >
-            <h5>Iniciar Sesión</h5>
-          </Button>
-        </li>
-      </Link>
-=======
       
       
 
->>>>>>> Stashed changes
       <Link to="/">
         <li>
           <FaSearch size={25} />

@@ -38,9 +38,6 @@ const Inicio = () => {
         <Container>
           <Row>
             <Col xs="12" md="12" className="mx-auto mt-4">
-<<<<<<< Updated upstream
-              <h1 style={{color: "white",}}>CuénTanos.org</h1>
-=======
               <h1>CuénTanos.org</h1>
               {/* Botón para abrir la modal */}
           <Row>
@@ -69,7 +66,6 @@ const Inicio = () => {
           </Row>
 
           
->>>>>>> Stashed changes
               <UncontrolledCarousel
                 className="mt-5"
                 items={[
@@ -112,10 +108,6 @@ const Inicio = () => {
                 </Link>
               </div>
             </Col>
-<<<<<<< Updated upstream
-            <BotonFlotante />
-=======
->>>>>>> Stashed changes
           </Row>
           
         </Container>
