@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navegacion from "../Navegacion/Navegacion";
 import './Foro.css'; // Importa el archivo CSS para los estilos
 import Footer from '../Footer/Footer';
+import BotonFlotante from "../BotonFlotante/BotonFlotante";
 
 const Foro = () => {
   const [threads, setThreads] = useState([]);
@@ -45,17 +46,18 @@ const Foro = () => {
   return (
     <>
         <Navegacion />
-        <div className="margin">
-            <main>
-                <div className="forum mt-5">
-                <h2>Tema</h2>
+        <div className="forum-container">
+          <main>
+              <div className="forum">
+                <h4 className='mt-5 mb-5'>Compartamos experiencias: </h4>
+                <h3 className='mb-5'>¡Tu voz importa! Únete y comparte en el foro</h3>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" name="threadTitle" placeholder="Título del hilo" required /><br />
-                    <textarea name="threadContent" placeholder="Contenido del hilo" required></textarea><br />
+                    <input type="text" name="threadTitle" placeholder="Título del hilo" style={{ width: '750px' }} required /><br />
+                    <textarea name="threadContent" placeholder="Contenido del hilo" style={{ minHeight: '100px', maxHeight: '300px', width: '750px' }} required></textarea><br />
                     <button type="submit">Crear</button>
                 </form>
                 <hr />
-                <h2>Listado de Comentarios</h2>
+                <h4>Comentarios</h4>
                 <div id="threadList">
                     {threads.map((thread, index) => (
                     <div key={index} className="thread">
@@ -66,12 +68,11 @@ const Foro = () => {
                     </div>
                     ))}
                 </div>
-                </div>
-            </main>
+              </div>
+              <BotonFlotante />
+          </main>
         </div>
-        <div>
         <Footer/>
-        </div>
     </>
   );
 };

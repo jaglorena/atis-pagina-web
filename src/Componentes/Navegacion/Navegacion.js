@@ -19,7 +19,7 @@ function Navegacion() {
   return (
     <header>
       <div className="logo">
-        <Link to="/acercade" onClick={toggleSideBar}>
+        <Link to="/" onClick={toggleSideBar}>
           <img
             style={{ width: 150, height: 90, marginBottom: 6, marginTop: 3 }}
             alt="..."

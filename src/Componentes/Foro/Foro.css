@@ -1,17 +1,18 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+.forum-container {
+    background-image: url('img/violencia-intrafamiliar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+    min-height: 100vh; 
 }
-  
+
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background: #000000;
     color: white;
-    min-height: 10vh;
 }
   
 main {
@@ -49,7 +50,7 @@ button {
     cursor: pointer;
 }
   
-  button:hover {
+button:hover {
     background-color: #555;
 }
   
@@ -71,7 +72,4 @@ hr {
     border-top: 1px solid #ccc;
 }
 
-.margin{
-    margin-bottom: 250px;
-}
 
