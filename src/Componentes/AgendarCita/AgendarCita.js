@@ -20,25 +20,58 @@ import "react-datepicker/dist/react-datepicker.module.css";
 const AgendarCita = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [profesionales, setProfesionales] = useState([]);
+  const [fechaCita, asginarFecha] = useState(new Date());
   const [profesionalSeleccionado, setProfesional] = useState(null);
-  const [horario, setHorarios] = useState(null);
+  const [horarioSeleccionado, setHorario] = useState(null);
+  const [horarios, setHorarios] = useState([]);
+
   const toggle = () => setDropdownOpen((prevState) => !prevState);
   const filtrar = (texto) => {
     setProfesional(null);
+    setHorario(null);
+    setHorarios([]);
     setProfesionales(
       Profesionales.filter((persona) => persona.especialidad === texto)
     );
   };
 
   const asignarHorario = (horario) => {
-    setHorarios(horario);
+    setHorario(horario);
+    setHorarios([horario]);
   };
 
   const asignarProfesional = (nombre) => {
     setProfesional(nombre);
   };
 
-  const [startDate, setStartDate] = useState(new Date());
+  const cambioDeFecha = (date) => {
+    if (date.toLocaleDateString() === "5/12/2023") {
+      setHorarios("10:00 AM");
+    }
+    asginarFecha(date);
+  };
+
+  const handleClickAgendar = () => {
+    if (profesionalSeleccionado === null) {
+      alert("Por favor seleccione un profesional para ser asesorado");
+      return;
+    } else if (!!!horarioSeleccionado) {
+      alert("Por favor seleccione una hora para ser asesorado");
+      return;
+    }
+
+    if (
+      horarioSeleccionado === "10:00 AM" &&
+      profesionalSeleccionado === "Abgda. Maria Lugano" &&
+      fechaCita.toLocaleDateString() == "5/12/2023"
+    ) {
+      alert("Este horario ya se encuentra reservado");
+      return;
+    }
+    let mensaje = `Se va a agendar la cita el dia ${fechaCita.toLocaleDateString()} iniciando a las ${horarioSeleccionado} con el profesional: ${profesionalSeleccionado}`;
+    if (window.confirm(mensaje) == true) alert("Cita agendada");
+  };
+
   return (
     <>
       <div>
@@ -102,8 +135,8 @@ const AgendarCita = () => {
               </Row>
               <Row style={{ textAlign: "center" }}>
                 <ReactDatePicker
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)}
+                  selected={fechaCita}
+                  onChange={(date) => cambioDeFecha(date)}
                 />
               </Row>
             </Col>
@@ -118,8 +151,8 @@ const AgendarCita = () => {
                       color="primary"
                       id="btn8"
                       outline
-                      onClick={() => asignarHorario(8)}
-                      disabled={horario === 8}
+                      onClick={() => asignarHorario("8:00 AM")}
+                      disabled={horarios.includes("8:00 AM")}
                     >
                       8:00 AM
                     </Button>
@@ -128,8 +161,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => asignarHorario(9)}
-                      disabled={horario === 9}
+                      onClick={() => asignarHorario("9:00 AM")}
+                      disabled={horarios.includes("9:00 AM")}
                     >
                       9:00 AM
                     </Button>
@@ -138,8 +171,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => asignarHorario(10)}
-                      disabled={horario === 10}
+                      onClick={() => asignarHorario("10:00 AM")}
+                      disabled={horarios.includes("10:00 AM")}
                     >
                       10:00 AM
                     </Button>
@@ -148,8 +181,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => asignarHorario(11)}
-                      disabled={horario === 11}
+                      onClick={() => asignarHorario("11:00 AM")}
+                      disabled={horarios.includes("11:00 AM")}
                     >
                       11:00 AM
                     </Button>
@@ -160,8 +193,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => asignarHorario(1)}
-                      disabled={horario === 1}
+                      onClick={() => asignarHorario("1:00 PM")}
+                      disabled={horarios.includes("1:00 PM")}
                     >
                       1:00 PM
                     </Button>
@@ -170,8 +203,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => asignarHorario(2)}
-                      disabled={horario === 2}
+                      onClick={() => asignarHorario("2:00 PM")}
+                      disabled={horarios.includes("2:00 PM")}
                     >
                       2:00 PM
                     </Button>
@@ -180,8 +213,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => asignarHorario(3)}
-                      disabled={horario === 3}
+                      onClick={() => asignarHorario("3:00 PM")}
+                      disabled={horarios.includes("3:00 PM")}
                     >
                       3:00 PM
                     </Button>
@@ -190,8 +223,8 @@ const AgendarCita = () => {
                     <Button
                       color="primary"
                       outline
-                      onClick={() => asignarHorario(4)}
-                      disabled={horario === 4}
+                      onClick={() => asignarHorario("4:00 PM")}
+                      disabled={horarios.includes("4:00 PM")}
                     >
                       4:00 PM
                     </Button>
@@ -211,7 +244,11 @@ const AgendarCita = () => {
             }}
           >
             <Col>
-              <Button color="success" outline>
+              <Button
+                color="success"
+                outline
+                onClick={() => handleClickAgendar()}
+              >
                 Agendar!
               </Button>
             </Col>
