@@ -4,14 +4,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-import Inicio from "./componentes/Inicio/Inicio";
-import AcercaDe from "./componentes/AcercaDe/AcercaDe";
-import Singup from "./componentes/Singup/Singup";
-import Login from "./componentes/Login/Login";
-import Articulos from "./componentes/Articulos/Articulos";
-import AgendarCita from "./componentes/AgendarCita/AgendarCita";
-import Foro from "./componentes/Foro/Foro";
-import BotonFlotante from "./componentes/BotonFlotante/BotonFlotante";
+import Inicio from "./Componentes/Inicio/Inicio";
+import AcercaDe from "./Componentes/AcercaDe/AcercaDe";
+import Singup from "./Componentes/Singup/Singup";
+import Login from "./Componentes/Login/Login";
+import Articulos from "./Componentes/Articulos/Articulos";
+import AgendarCita from "./Componentes/AgendarCita/AgendarCita";
+import Foro from "./Componentes/Foro/Foro";
+import BotonFlotante from "./Componentes/BotonFlotante/BotonFlotante";
 
 const router = createBrowserRouter([
   {
