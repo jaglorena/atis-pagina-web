@@ -6,9 +6,20 @@ import "./Navegacion.css";
 
 function Navegacion() {
   const [toggle, setToggle] = useState(false);
+<<<<<<< Updated upstream
+=======
+  const [loginClicked, setLoginClicked] = useState(false); // Nuevo estado para controlar el clic en iniciar sesión
+>>>>>>> Stashed changes
 
   function toggleSideBar() {
     setToggle(!toggle);
+  }
+
+  function handleLoginClick() {
+    // Realizar aquí la lógica de inicio de sesión, por ejemplo, enviar datos a un servidor
+
+    // Deshabilitar el botón después del primer clic
+    setLoginClicked(true);
   }
 
   document.body.onclick = function (e) {
@@ -61,6 +72,7 @@ function Navegacion() {
           </Col>
         </ul>
       </nav>
+<<<<<<< Updated upstream
       <Link to="/singup">
         <li>
           <Button
@@ -89,6 +101,11 @@ function Navegacion() {
           </Button>
         </li>
       </Link>
+=======
+      
+      
+
+>>>>>>> Stashed changes
       <Link to="/">
         <li>
           <FaSearch size={25} />
