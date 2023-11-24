@@ -12,11 +12,15 @@ import Articulos from './Componentes/Articulos/Articulos'
 import BotonFlotante from './Componentes/BotonFlotante/BotonFlotante';
 import AgendarCita from './Componentes/AgendarCita/AgendarCita';
 
+
+
+
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Inicio />
-  },
+  }, 
   {
     path: "/acercade",
     element: <AcercaDe />
